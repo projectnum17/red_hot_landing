@@ -1,0 +1,113 @@
+@mixin xl {
+    @media screen and (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (max-width: 1240px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (max-width: 799px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media screen and (max-width: 639px) {
+        @content;
+    }
+}
+
+@mixin xxs {
+    @media screen and (max-width: 380px) {
+        @content;
+    }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+button,
+a,
+i {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: inherit;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-01;
+    overflow-x: hidden;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+.btn {
+    min-width: 160px;
+    padding: 16px 30px;
+    box-shadow: inset 0px 0px 1px #000;
+    border: 0;
+    background-color: #fff;
+    color: $btn;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 14px;
+    position: relative;
+    letter-spacing: .05em;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    font-family: $font-01 !important;
+ 
+    &:focus {
+       outline: 0;
+    }
+ 
+    &:before {
+       width: 100%;
+       height: 100%;
+       background-color: $btn-back;
+       position: absolute;
+       content: '';
+       z-index: -1;
+       left: 0;
+       top: 0;
+       transition: all .3s ease;
+       transform: translate(6px, 6px);
+    }
+ 
+    &:hover {
+       &:before {
+          transform: translate(0px, 0px);
+       }
+    }
+ }
