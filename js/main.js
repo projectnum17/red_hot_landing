@@ -10,19 +10,19 @@ $(function () {
 
         const images = [{
             id: 0,
-            image: "img/photo-1.jpg"
+            image: "./img/photo-1.jpg"
         },
         {
             id: 1,
-            image: "img/photo-2.jpg"
+            image: "./img/photo-2.jpg"
         },
         {
             id: 2,
-            image: "img/photo-3.jpg"
+            image: "./img/photo-3.jpg"
         },
         {
             id: 3,
-            image: "img/photo-4.jpg"
+            image: "./img/photo-4.jpg"
         }
         ];
 
